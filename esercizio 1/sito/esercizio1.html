@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <title>
+        color picker
+  </title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+      <div class="container">
+
+        <form>
+        <p>cliccare il bottone per cambiare colore</p>
+  <label for="hex-input">Inserire l'esadecimale di un colore:</label>
+        <input type="text" id="hex-input">
+        <input type="submit" value="cambia colore">
+</form>
+
+          <script>
+          const form = document.querySelector('form');
+          form.addEventListener('submit', (event) => {
+              event.preventDefault();
+               const hexInput = document.querySelector('#hex-input');
+               const hexValue = hexInput.value;
+                document.body.style.backgroundColor = hexValue;
+               });
+          </script>
+
+</div>
+</body>
+</html>
